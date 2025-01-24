@@ -1,3 +1,4 @@
+git branch
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -8,6 +9,8 @@
 
 # Node
 /node_modules
+src/environments/
+
 npm-debug.log
 yarn-error.log
 
