@@ -1,0 +1,43 @@
+<div class="signup-container">
+    <div class="signup-card">
+        <div class="signup-content">
+            <div class="logo">
+                <img src="/tasker-logo.png" alt="tasker-logo" class="logo">
+            </div>
+            <form class="signup-form">
+                <p>Create your account!</p>
+                <!-- email -->
+                <br> <label> Email </label> <br>
+                <mat-form-field>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                        placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="emailFormControl?.hasError('email') && !emailFormControl?.hasError('required')">
+                        *Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl?.hasError('required')">
+                        *Email is required
+                    </mat-error>
+                </mat-form-field> <br>
+                <div class="txt"> Already have an account? <a routerLink="/auth/login">Sign in</a></div>
+                <button class="signup-btn" [disabled]="emailFormControl.invalid"
+                    [ngClass]="{'disabled-btn': emailFormControl.invalid, 'signup-btn': !emailFormControl.invalid}">Sign
+                    up</button>
+                <br><br>
+                ----------------------------------------------------- or
+                ----------------------------------------------------- <br><br>
+                <button class="social-media-signup">
+                    <img src="icons/google.svg" alt="Google Icon" class="social-media-icon" /> Login in with
+                    Google
+                </button> <br><br>
+                <button class=" social-media-signup">
+                    <img src="icons/facebook.svg" alt="Facebook Icon" class="social-media-icon" /> Login in
+                    with Facebook
+                </button> <br><br>
+                <button class="social-media-signup">
+                    <img src="icons/github.svg" alt="Githup Icon" class="social-media-icon" /> Login in with
+                    Github
+                </button> <br><br>
+            </form>
+        </div>
+    </div>
+</div>

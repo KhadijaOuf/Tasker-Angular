@@ -1,0 +1,118 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5167f9;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+mat-form-field {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.signup-card {
+    margin-top: 2cm;
+    width: 550px;
+    height: 700px;
+    max-height: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    margin-bottom: 65px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.signup-form {
+    margin-left: 30px;
+}
+
+mat-form-field {
+    width: 490px;
+    height: 70px;
+}
+
+mat-error {
+    font-size: 15px;
+    font-weight: 500px;
+    color: red;
+}
+
+.txt {
+    margin-bottom: 15px;
+    margin-left: 250px;
+}
+
+.signup-btn {
+    width: 490px;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #5167f9;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.disabled-btn {
+    width: 490px;
+    height: 55px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #686869;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.signup-btn:hover {
+    background: #485ce3;
+}
+
+.social-media-signup {
+    width: 490px;
+    height: 55px;
+    border: solid 1px #5167f9;
+    border-radius: 10px;
+    color: #5167f9;
+    background: white;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.social-media-signup:hover {
+    background: whitesmoke;
+}
+
+.social-media-icon {
+    margin-right: 5px;
+    width: 24px;
+}
+
+a {
+    color: #5167f9;
+}
