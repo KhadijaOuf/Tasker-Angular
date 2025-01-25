@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +10,7 @@ describe('AppComponent', () => {
         RouterModule.forRoot([])
       ],
       declarations: [
-        AppComponent
+        AppComponent, SharedModule
       ],
     }).compileComponents();
   });

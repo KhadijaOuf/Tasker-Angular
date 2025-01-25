@@ -1,6 +1,8 @@
+import { AuthService } from './../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { Router } from '@angular/router';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null): boolean {
@@ -17,7 +19,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class LoginComponent implements OnInit {
   // Create Form :
   loginForm!: FormGroup;     // Using '!' to assert the value will be assigned later
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -44,5 +46,11 @@ export class LoginComponent implements OnInit {
       this.loginForm.reset();
     }
   }
+
+  // login :
+  login() {
+    this.authService.signIn(this.loginForm.value.emailFormControl, this.loginForm.value.passwordFormControl);
+  }
+
 
 }

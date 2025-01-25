@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { AuthService } from '../auth.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null): boolean {
@@ -17,6 +18,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class RegisterComponent {
 
+  constructor(private authService: AuthService) { }
+
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   //emailFormControl!: FormControl;
   matcher = new MyErrorStateMatcher();
@@ -24,6 +27,11 @@ export class RegisterComponent {
   ngOnInit(): void {
     this.emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   }
+
+  signUp() {
+    //this.authService.signUp(this.emailFormControl.value);
+  }
+
 
 
 }
