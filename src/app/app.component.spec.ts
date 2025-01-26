@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -10,7 +11,7 @@ describe('AppComponent', () => {
         RouterModule.forRoot([])
       ],
       declarations: [
-        AppComponent, SharedModule
+        AppComponent, SharedModule, BrowserAnimationsModule
       ],
     }).compileComponents();
   });

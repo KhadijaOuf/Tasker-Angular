@@ -12,10 +12,9 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     BoardComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
-    CommonModule,
     DashboardRoutingModule,
     SharedModule, MatSidenavModule
   ]

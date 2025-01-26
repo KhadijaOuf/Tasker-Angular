@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 // Angular Material Modules
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -9,16 +10,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
-    FooterComponent, NavbarComponent, SidebarComponent
+    FooterComponent, SidebarComponent, CalendarComponent
   ],
   imports: [
     CommonModule, // Required for Angular directives like *ngIf, *ngFor
-    FormsModule,
+    FormsModule, RouterModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -33,7 +34,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    FooterComponent, NavbarComponent, SidebarComponent // Export it to make it available in other modules
+    FooterComponent, SidebarComponent // Export it to make it available in other modules
 
   ],
 })

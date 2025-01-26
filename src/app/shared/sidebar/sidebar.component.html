@@ -1,1 +1,17 @@
-<p>sidebar works!</p>
+<div class="sidebar-container">
+    <img src="/tasker-logo.png" class="logo" />
+    <div class="sidebar-item">
+        <a routerLink="/profile"> <mat-icon>account_circle</mat-icon> Profile </a>
+    </div>
+    <div class="sidebar-item">
+        <a [routerLink]="[{ outlets: { primary: ['dashboard'], sidebar: ['board'] } }]"> <mat-icon>dashboard</mat-icon>
+            Dashboard </a>
+    </div>
+    <div class="sidebar-item">
+        <a [routerLink]="[{ outlets: { primary: ['dashboard'], sidebar: ['calendar'] } }]">
+            <mat-icon>calendar_today</mat-icon> Calendar </a>
+    </div>
+    <div class="sidebar-item">
+        <a routerLink="/settings"> <mat-icon>settings</mat-icon> Settings </a>
+    </div>
+</div>
